@@ -32,7 +32,8 @@
 - Firebase와 GrowVision 앱 연동을 통해 실시간 수확 데이터 모니터링 제공  
 
 ### System Diagram
-![System Architecture](./images/system_diagram.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/28a5d42e-8877-45fa-98f2-65c55d539408" />
+
 
 ---
 
