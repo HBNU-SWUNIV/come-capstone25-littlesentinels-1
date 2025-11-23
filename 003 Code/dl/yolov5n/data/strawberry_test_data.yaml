@@ -1,0 +1,5 @@
+train: ../dataset/images/train    # 실제로는 사용되지 않지만 형식을 맞추기 위해 남겨둠
+val:   ../dataset/images/test     # test 폴더를 검증용으로 지정
+
+nc: 1
+names: ['strawberry']

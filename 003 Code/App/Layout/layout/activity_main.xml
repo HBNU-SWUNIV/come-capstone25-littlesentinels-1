@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="view_model"
+            type="com.example.growvision20.HarvestViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:titleTextColor="@color/white"
+            android:background="#669966" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp" >
+
+            <androidx.media3.ui.PlayerView
+                android:id="@+id/player_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/black"
+                app:controller_layout_id="@layout/controller_exoplayer"/>
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/loading_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:indeterminate="true"
+                android:visibility="invisible"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Strawberry"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:background="#FFCCCC" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="4"
+            android:columnCount="2"
+            android:fitsSystemWindows="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="Total"
+                android:textColor="#555555"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:background="@drawable/tv_default_style"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="@{view_model.getData().n_total}"
+                android:textColor="#CC3333"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:background="@drawable/tv_default_style2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="Mature"
+                android:textColor="#555555"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:background="@drawable/tv_default_style"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="@{view_model.getData().n_mature}"
+                android:textColor="#CC3333"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:background="@drawable/tv_default_style2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="Immature"
+                android:textColor="#555555"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:background="@drawable/tv_default_style"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="@{view_model.getData().n_immature}"
+                android:textColor="#CC3333"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:background="@drawable/tv_default_style2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="Harvested"
+                android:textColor="#555555"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:background="@drawable/tv_default_style"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="@{view_model.getData().n_harvest}"
+                android:textColor="#CC3333"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:background="@drawable/tv_default_style2"/>
+        </GridLayout>
+
+    </LinearLayout>
+</layout>

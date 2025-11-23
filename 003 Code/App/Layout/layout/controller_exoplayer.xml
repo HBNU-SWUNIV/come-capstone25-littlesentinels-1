@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/black">
+
+    <ImageButton
+        android:id="@+id/btn_restart"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:src="@drawable/ic_restart"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@id/exo_play_pause"
+        style="@style/ExoMediaButton.Play"
+        android:layout_weight="1"/>
+
+    <ImageButton
+        android:id="@+id/btn_full_screen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:src="@drawable/ic_fullscreen"
+        app:tint="@color/white" />
+
+    <Button
+        android:id="@+id/btn_live"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/black"
+        android:text="Live"
+        android:textSize="20sp" />
+</LinearLayout>
